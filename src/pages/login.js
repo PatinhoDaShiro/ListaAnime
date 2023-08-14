@@ -19,6 +19,7 @@ align-items: center;
 justify-content: space-between;
 padding: 2rem;
 height: 50%;
+min-height: 400px;
 border-radius: 5%;
 backdrop-filter: blur(2px);
 box-shadow: -5px -5px 10px rgba(0, 0, 0, 0.2),5px 5px 10px rgba(0, 0, 0, 0.2);
