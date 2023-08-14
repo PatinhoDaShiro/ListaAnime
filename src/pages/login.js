@@ -79,14 +79,14 @@ transition: 1s;
 padding: 0.5rem 1rem ;
 cursor: pointer;
 position: relative;
-a{
-    text-decoration: none;
+span{
+   
     color: black;
     font-size: 24px;
     font-family: 'Play', sans-serif;
     font-weight: 600;
 }
-a::after{
+span::after{
     width: 80%;
     height: 2px;
     transition: opacity 300ms, transform 300ms;
@@ -99,7 +99,7 @@ a::after{
     bottom: 15%;
     left: 10%;
 }
-&:hover a::after{
+&:hover span::after{
     transform: scale(1);
 }
 &:hover{
@@ -120,7 +120,7 @@ return(
         <Titulo>Login</Titulo>
         <Input type="email" placeholder="E-mail"/>
         <Input type="password" placeholder="Senha"/>
-        <Botao type="submit"><a href="/">Entrar</a></Botao>
+        <Botao type="submit"><span>Entrar</span></Botao>
         </Formulario>
     </CaixaFormulario>
     </ImagemFundo>
