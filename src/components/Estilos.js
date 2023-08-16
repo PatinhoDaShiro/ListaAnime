@@ -65,6 +65,10 @@ span::after{
 &:hover{
     background:#12a5dc ;
 }
+&:disabled{
+    opacity: 0.7;
+    border: black 2px solid;
+}
 `
 const ImagemFundo = styled.section`
 height: 100vh;

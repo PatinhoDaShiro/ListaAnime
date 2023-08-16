@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import Login from './pages/Login.js';
 import Register from './pages/Register.js';
 import "./reset.css"
-import { Router,Route,BrowserRouter, Routes } from 'react-router-dom';
+import { Route,BrowserRouter, Routes } from 'react-router-dom';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
