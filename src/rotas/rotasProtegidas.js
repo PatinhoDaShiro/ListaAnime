@@ -9,9 +9,8 @@ const RotasProtegidas = ({children}) =>{
         const verificaAutenticacao = userService.usuarioAutenticado()
         console.log(pathname, verificaAutenticacao)
         if(pathname === '/login' || pathname === '/register'){
-            console.log('ok 1')
         if(verificaAutenticacao){
-            window.location.href = 'http://localhost:3000'
+            window.location.href = 'https://lista-anime.vercel.app'
         }else{
             return children 
         }
