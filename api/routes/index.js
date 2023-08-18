@@ -4,12 +4,12 @@ const cadastro = require('./cadastros.js')
 
 
 
-module.exports = app =>{
+module.exports = app => {
 
 
   app.use(
- bodyParser.json(),
- cadastro
- )
-  
+    bodyParser.json(),
+    cadastro
+  )
+
 }

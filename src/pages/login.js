@@ -1,25 +1,32 @@
 import fundoimg from "../images/login.png"
 import Cadastro from "../components/Cadastro.js"
 import { Formulario, Titulo, Input, Botao, TextoMudarAba } from "../components/Estilos.js"
-import { Link } from "react-router-dom"
+import { Link, useNavigate, useLocation } from "react-router-dom"
 import { useState } from "react"
 import {validarEmail, validarSenha} from '../Utils/validadores.js'
 import userServices from '../services/UserServices.js'
 const userService = new userServices()
 const LoginPage = () => {
-    
+    const { pathname } = useLocation();
     const [form, setForm] = useState([])
     const [loading,setLoading] = useState(false)
 
     const handleChange = (event) =>{
         setForm({...form, [event.target.name]:event.target.value})
-        console.log(form)
     }
+    const navigate = useNavigate()
     const handleSubmit = async (event) =>{
         setLoading(true)
         event.preventDefault()
         const response = await userService.login(form)
-        console.log('response do login', response)
+        
+        if(response){
+        if(pathname === '/login'){
+        navigate("..", { relative: "path" });
+        }else{
+        window.location.href = 'http://localhost:3000'
+        }
+        }
         setLoading(false)
 
     }
