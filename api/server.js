@@ -26,13 +26,7 @@ mongoose.connect(`mongodb+srv://${dbUser}:${dbPassword}@usuarios.yeatmm5.mongodb
 })
 .catch((err)=>console.log(err))
 // rotas
-function verifyJWT(){
-    const token = localStorage.getItem(token)
-    jwt.verify(token, secret, (err) => {
-      if (err) return false
-      return true
-    });
-  }
+
   
 routes(app);
 module.exports = app

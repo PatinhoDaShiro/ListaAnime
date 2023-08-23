@@ -25,7 +25,7 @@ const Registro = () => {
         if(pathname === '/register'){
             navigate("..", { relative: "path" });
         }else{
-        window.location.href = 'http://localhost:3000'
+        window.location.href = 'https://lista-anime.vercel.app'
         }}
         setLoading(false)
 
