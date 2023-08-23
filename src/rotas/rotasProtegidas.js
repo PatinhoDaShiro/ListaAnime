@@ -7,7 +7,6 @@ const RotasProtegidas = ({children}) =>{
     const { pathname } = useLocation();
 
         const verificaAutenticacao = userService.usuarioAutenticado()
-        console.log(pathname, verificaAutenticacao)
         if(pathname === '/login' || pathname === '/register'){
             console.log('ok 1')
         if(verificaAutenticacao){

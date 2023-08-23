@@ -7,11 +7,11 @@ import Rota from './rotas/Rotas';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
+ 
   
   <Rota/>
   
-  </React.StrictMode>
+
 );
 
 

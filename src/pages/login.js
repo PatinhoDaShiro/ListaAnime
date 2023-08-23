@@ -3,7 +3,7 @@ import Cadastro from "../components/Cadastro.js"
 import { Formulario, Titulo, Input, Botao, TextoMudarAba } from "../components/Estilos.js"
 import { Link, useNavigate, useLocation } from "react-router-dom"
 import { useState } from "react"
-import {validarEmail, validarSenha} from '../Utils/validadores.js'
+import {validarEmail, validarSenha} from '../Utils/Validadores.js'
 import userServices from '../services/UserServices.js'
 const userService = new userServices()
 const LoginPage = () => {

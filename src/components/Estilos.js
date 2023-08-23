@@ -1,5 +1,5 @@
 import styled from "styled-components"
-
+//registro / login
 const Formulario = styled.form`
 display: flex;
 flex-direction: column;
@@ -134,4 +134,155 @@ a{
     font-size: 14px;
 }
 `
-export {Formulario,Titulo,Input,Botao,ImagemFundo,CaixaFormulario,LogoSite,ImageLogo,TituloLogo,TextoMudarAba}
+
+//menu
+const NavMenu = styled.nav`
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: 4rem;
+    align-items: center;
+    margin-top: 5rem;
+    background: white;
+`
+const Opcoes = styled.ul`
+    font-size: 18px;
+    display:flex;
+    justify-content: space-between;
+    width: 40%;
+    padding: 2rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: 400;
+    color: gray;
+    li{
+        position: relative;
+        cursor: pointer;
+    }
+    
+    li span::after{
+        
+        width: 100%;
+        height: 5px;
+        transition: opacity 300ms, transform 100ms;
+        transform: scale(0);
+        transform-origin: center;
+        content: " ";
+        position: absolute;
+        bottom: -1rem;
+        left: 0%;
+    }
+    li:nth-child(1) span::after {
+        background: #0080c0;
+    }
+    li:nth-child(2) span::after {
+        background: green;
+    }
+    li:nth-child(3) span::after {
+        background: blue;
+    }
+    li:nth-child(4) span::after {
+        background: red;
+    }
+    li:nth-child(5) span::after {
+        background: gray;
+    }
+
+    li:hover span::after{
+    transform: scale(1);
+}`
+const CaixaPesquisa = styled.div`
+position: relative;
+label{
+    position:absolute;
+    right: 5%;
+    top: 26%;
+}
+`
+const Pesquisar = styled.input`
+height: 2rem;
+outline: none;
+border: 1px solid gray;
+border-radius: 5px;
+padding: 1rem;
+&::placeholder{
+    font-size: 16px;
+}
+`
+const Avatar = styled.div`
+display: flex;
+align-items: center;
+gap: 1rem;
+font-size: 24px;
+color: #6e6e6e;
+img{
+    border-radius: 50%;
+    width: 8rem;
+    border: 5px solid white;
+    cursor: pointer;
+}
+span{
+    cursor: pointer;
+}
+
+
+`
+
+// Lista
+
+const Container = styled.section`
+display: flex;
+flex-direction: column;
+width: 80%;
+margin: auto;
+`
+const Anime = styled.div`
+width: 100%;
+background-color: white;
+text-align: center;
+display: flex;
+align-items: center;
+padding: 1rem;
+margin: 0.5rem;
+position: relative;
+&:nth-child(1){
+    margin-top: 2.3rem;
+}
+&::after{
+    position: absolute;
+    height: 100%;
+    width: 3px;
+    background: green;
+    content: '';
+    left: 0%;
+}
+img{
+    border-radius: 50%;
+    width: 5rem;
+    height: 5rem;
+}
+h1{
+    font-weight: 500;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    
+}
+gap: 1rem;
+`
+export {
+    Anime,
+    Container,
+    CaixaPesquisa,
+    Avatar,
+    Pesquisar,
+    Opcoes,
+    Formulario, 
+    Titulo, 
+    Input, 
+    Botao, 
+    ImagemFundo, 
+    CaixaFormulario, 
+    LogoSite, 
+    ImageLogo, 
+    TituloLogo, 
+    TextoMudarAba, 
+    NavMenu
+}

@@ -17,7 +17,6 @@ export default class UserServices {
             (res) => {
                 localStorage.setItem('name', res.data.name);
                 localStorage.setItem('token', res.data.token);
-                console.log(res.data)
                 boleano = true
             }
 
@@ -47,8 +46,6 @@ export default class UserServices {
     }
 
     usuarioAutenticado() {
-        console.log(localStorage.getItem('token') )
-
         return localStorage.getItem('token') !== null ? true : false
     }
 

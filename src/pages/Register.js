@@ -4,7 +4,7 @@ import {Formulario, Titulo, Input, Botao, TextoMudarAba} from "../components/Est
 import { Link, useLocation, useNavigate } from "react-router-dom"
 import { useState } from "react"
 import UserServices from "../services/UserServices"
-import {validarEmail, validarSenha,validarNome, compararSenhas} from '../Utils/validadores.js'
+import {validarEmail, validarSenha,validarNome, compararSenhas} from '../Utils/Validadores.js'
 const userService = new UserServices()
 
 const Registro = () => {
@@ -46,7 +46,6 @@ const Registro = () => {
             <Input type="password" name='confirmpassword' placeholder="Confirme sua senha" onChange={handleChange}/>
             <Botao type="submit"  disabled={loading || !validadorInput()} onClick={handleSubmit} ><span>Cadastre-se</span></Botao>
             <TextoMudarAba>Já possui conta? <Link to="/login">Faça login!</Link></TextoMudarAba>
-
         </Formulario>
         </Cadastro>
     )
